@@ -4,7 +4,7 @@ This test suite includes unit tests for the methods of the TrapezoidalFuzzyNumbe
 
 import unittest
 
-from fuzzy_numbers.trapezoidal_fuzzy_number import TrapezoidalFuzzyNumber
+from src.fuzzy_numbers.trapezoidal_fuzzy_number import TrapezoidalFuzzyNumber
 
 
 class TestTrapezoidalFuzzyNumber(unittest.TestCase):

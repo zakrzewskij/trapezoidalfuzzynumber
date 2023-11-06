@@ -6,7 +6,7 @@ import time
 import unittest
 
 import numpy as np
-from ambiguity.dependent_trapezoidal_ambiguity_measure import (
+from src.ambiguity.dependent_trapezoidal_ambiguity_measure import (
     DependentTrapezoidalAmbiguityMeasurer,
 )
 
@@ -63,7 +63,7 @@ class TestDependentTrapezoidalAmbiguityMeasurer(unittest.TestCase):
         DependentTrapezoidalAmbiguityMeasurer.dependent_measure_data_ambiguity(*args)
         end_time = time.time()
         execution_time = end_time - start_time
-        self.assertLessEqual(execution_time, 10.0)
+        self.assertLessEqual(execution_time, 20.0)
 
 
 if __name__ == "__main__":

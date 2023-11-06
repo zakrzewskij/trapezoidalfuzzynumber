@@ -81,8 +81,8 @@ class IndependentTrapezoidalAmbiguityMeasurer(TrapezoidalAmbiguityMeasurer):
         ...     (44, 50, 56, 66),
         ... ])
 
-        >>> result = IndependentTrapezoidalAmbiguityMeasurer.independent_measure_data_ambiguity(*TrapezoidalAmbiguityMeasurer.measure_ambiguity([table_X, table_Y]))
-        >>> 0.001 <= result <= 0.003
+        >>> p_value = IndependentTrapezoidalAmbiguityMeasurer.independent_measure_data_ambiguity(*TrapezoidalAmbiguityMeasurer.measure_ambiguity([table_X, table_Y]))
+        >>> 0.001 <= p_value <= 0.003
         True
 
         """

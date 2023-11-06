@@ -17,6 +17,7 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
     ----------
     *args : float
         Four values representing the trapezoidal fuzzy number (lower_left_bound, upper_left_bound, upper_right_bound, lower_right_bound).
+        In the documentation to standardise conventions, all descriptions will be presented as 𝑇𝑟𝑎(a₁, a₂, a₃, a₄).
     """
 
     def __init__(self, *args: float) -> None:
@@ -26,22 +27,14 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
         Parameters
         ----------
         *args : float
-            The four values representing the trapezoidal fuzzy number (lower_left_bound, upper_left_bound, upper_right_bound,lower_right_bound).
+            The four values representing the trapezoidal fuzzy number (a₁, a₂, a₃, a₄).
 
         Error
         ------
         ValueError
-            If the trapezoidal fuzzy number does not have exactly 4 boundaries.
+            The attributes a₁, a₂, a₃, a₄ of the trapezoidal fuzzy number are not floating-point values.
         ValueError
-            If the trapezoidal fuzzy number boundaries are invalid. Specifically, it raises an error if the boundaries do not follow the order: lower_left_bound <= upper_left_bound <= upper_right_bound <= lower_right_bound.
-
-        Notes
-        -----
-        The TrapezoidalFuzzyNumber class represents a trapezoidal fuzzy number defined by four values: 'a_1', 'a_2', 'a_3' and 'a_4', where the trapezoidal fuzzy number can be referred to as A= Tra(a_1,a_2,a_3,a_4).
-
-            A trapezoidal fuzzy number is a number defined by a trapezoid on the real number line. In this trapezoid, the lower bounds are denoted by 'a_1' and 'a_4', while the upper bounds are denoted by 'a_2' and 'a_3'. The core values of the fuzzy number are also represented by 'a_2' and 'a_3'
-
-                The trapezoidal fuzzy number must satisfy the condition: 'a_1' <= 'a_2' <= 'a_3' <= 'a_4'.
+            The trapezoidal fuzzy number does not have exactly four boundaries, or the boundaries are invalid, specifically, if they do not follow the order: a₁ ≤ a₂ ≤ a₃ ≤ a₄.
 
         Examples
         --------
@@ -70,7 +63,7 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
         Parameters
         ----------
         *args : float
-            The values of the trapezoidal fuzzy number object.
+            The values of the trapezoidal fuzzy number.
 
         Returns
         -------
@@ -79,7 +72,7 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
 
         Notes
         -----
-        This static method takes a variable number of arguments (four values representing the trapezoidal fuzzy number A = Tra(a_1,a_2,a_3,a_4)) and sorts them in ascending order.
+        This static method takes a variable number of arguments (four values representing the trapezoidal fuzzy number 𝐴 = 𝑇𝑟𝑎(a₁, a₂, a₃, a₄) and sorts them in ascending order.
 
         Examples
         --------
@@ -1294,7 +1287,7 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
         -----
         The string representation is returned in the format:
             The string representation is returned in the format:
-            'TrapezoidalFuzzyNumber(a_1, a_2, a_3, a_4)
+            'TrapezoidalFuzzyNumber(a₁, a₂, a₃, a₄)
             \nSupport:(min_support, max_support)
             \nCore: (min_core, max_core)
             \nAmbiguity of the trapezoidal fuzzy number: ambiguity_value)'
@@ -1340,11 +1333,11 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
         The membership function value of a trapezoidal fuzzy number 𝐴 = 𝑇𝑟𝑎(a₁, a₂, a₃, a₄) is defined as follows:
 
         µ_A(x) = {
-                0                           for x < a_1, \n
-                (x - a_1) / (a_2 - a_1)     for a_1 ≤ x < a_2, \n
-                1                           for a_2 ≤ x < a_3, \n
-                (a_4 - x) / (a_4 - a_3)     for a_3 < x ≤ a_4, \n
-                0                           for x > a_4. \n
+                0                           for x < a₁, \n
+                (x - a₁) / (a₂ - a₁)     for a₁ ≤ x < a₂, \n
+                1                           for a₂ ≤ x < a₃, \n
+                (a₄ - x) / (a₄ - a₃)     for a₃ < x ≤ a₄, \n
+                0                           for x > a₄. \n
             }
 
                 Membership function assume 0 value when the x element doesn't belong to the fuzzy set  A.
@@ -1438,11 +1431,11 @@ class TrapezoidalFuzzyNumber(AlgebraFuzzyNumber, FuzzyNumber):
         The membership function value of a trapezoidal fuzzy number 𝐴 = 𝑇𝑟𝑎(a₁, a₂, a₃, a₄) is defined as follows:
 
         µ_A(x) = {
-                0                           for x < a_1,\n
-                (x - a_1) / (a_2 - a_1)     for a_1 ≤ x < a_2,\n
-                1                           for a_2 ≤ x < a_3,\n
-                (a_4 - x) / (a_4 - a_3)     for a_3 < x ≤ a_4,\n
-                0                           for x > a_4.\n
+                0                           for x < a₁,\n
+                (x - a₁) / (a₂ - a₁)     for a₁ ≤ x < a₂,\n
+                1                           for a₂ ≤ x < a₃,\n
+                (a₄ - x) / (a₄ - a₃)     for a₃ < x ≤ a₄,\n
+                0                           for x > a₄.\n
                 }
 
         Examples
